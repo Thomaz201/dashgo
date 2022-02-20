@@ -9,7 +9,7 @@ import { makeServer } from '../services/mirage'
 import { queryClient } from '../services/queryClient';
 
 if (process.env.NODE_ENV === 'development') {
-  makeServer()
+  makeServer({ environment: "development" })
 }
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -7,8 +7,9 @@ type User = {
   created_at: string;
 }
 
-export function makeServer() {
+export function makeServer({ environment = "test" }) {
   const server = createServer({
+    environment,
     serializers: {
       application: ActiveModelSerializer,
     },
